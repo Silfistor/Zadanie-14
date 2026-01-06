@@ -1,0 +1,9 @@
+all:
+	gcc server_posix.c -o server_posix
+        gcc client_posix.c -o client_posix
+        
+	gcc server_sysv.c -o server_sysv
+	gcc client_sysv.c -o client_sysv
+
+	gcc chat_server.c -o chat_server -pthread
+	gcc chat_client.c -o chat_client -pthread -lncurses
